@@ -1,6 +1,11 @@
 package modelo;
 
-public interface Cifrador {
-	public String codificar(String pTexto);
-	public String decodificar(String pTexto);
+import java.util.ArrayList;
+
+public abstract class Cifrador {
+	public abstract String codificar(String pTexto);
+	public abstract String decodificar(String pTexto);
+	public abstract boolean necesitaParams();
+	public abstract ArrayList<String> getListParams();
+	public abstract void setListParams(ArrayList<String> pParams);
 }
