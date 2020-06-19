@@ -6,13 +6,9 @@ public class Telefonico extends Cifrador {
 	private final char[][] teclado= {{'a','b','c'},{'d','e','f'},{'g','h','i'},{'j','k','l'},{'m','n','o'},{'p','q','r','s'}
     ,{'t','u','v'},{'w','x','y','z'}};
 	
-	@Override
-	public boolean necesitaParams() {
-		return false;
-	}
 
 	@Override
-	public ArrayList<String> getListParams() {
+	public ArrayList<String> getParams() {
 		return null;
 	}
 

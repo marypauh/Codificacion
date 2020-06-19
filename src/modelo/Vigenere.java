@@ -27,7 +27,7 @@ private int determinarDesplazamiento(int pPosicion){
 		  }
 
 @Override
-public ArrayList<String> getListParams() {
+public ArrayList<String> getParams() {
 	ArrayList<String> params = new ArrayList<String>();
 	params.add("Cifra de dos digitos");
 	return params;

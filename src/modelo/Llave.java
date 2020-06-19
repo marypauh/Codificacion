@@ -6,7 +6,7 @@ public class Llave extends Sustitucion {
 	private String llave;
 
 	@Override
-	public ArrayList<String> getListParams() {
+	public ArrayList<String> getParams() {
 		ArrayList<String> params = new ArrayList<String>();
 		params.add("Llave");
 		return params;

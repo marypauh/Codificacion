@@ -8,12 +8,7 @@ public class Binario extends Cifrador{
 	private Utilitario util = new Utilitario();
 
 	@Override
-	public boolean necesitaParams() {
-		return false;
-	}
-
-	@Override
-	public ArrayList<String> getListParams() {
+	public ArrayList<String> getParams() {
 		return null;
 	}
 

@@ -18,7 +18,7 @@ public class Utilitario {
 	    return convertirASCIILetra(codigo);    
 	  }
 	  
-	  public char validarCodifoASCIIDecodificar(int codigo){
+	  public char validarCodigoASCIIDecodificar(int codigo){
 	    if(codigo < 97){
 	      int diferencia = codigo - 97;
 	      codigo = 123 - diferencia;

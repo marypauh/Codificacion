@@ -6,7 +6,7 @@ public class Cesar extends Sustitucion{
 	private int desplazamiento;
 
 	@Override
-	public ArrayList<String> getListParams() {
+	public ArrayList<String> getParams() {
 		ArrayList<String> params = new ArrayList<String>();
 		params.add("Desplazamiento");
 		return params;
@@ -33,10 +33,10 @@ public class Cesar extends Sustitucion{
 	    int cod = util.convertirLetraASCII(pLetra);
 	    if(esCodificar){
 	    	cod += desplazamiento;   
-	    	return util.validarCodifoASCIIDecodificar(cod);
+	    	return util.validarCodigoASCIIDecodificar(cod);
 	    }else{
 	    	cod -= this.desplazamiento;
-	      return util.validarCodifoASCIIDecodificar(cod);
+	      return util.validarCodigoASCIIDecodificar(cod);
 	    }
 	  }
 	
