@@ -2,7 +2,7 @@ package main;
 
 import java.util.ArrayList;
 
-
+import factory.CifradorFactory;
 import modelo.Cifrador;
 import modelo.Cesar;
 import modelo.Llave;
@@ -10,17 +10,31 @@ import modelo.Telefonico;
 import modelo.TransMensaje;
 import modelo.TransPalabra;
 import modelo.Vigenere;
+import servicio.ServicioCifrador;
 import modelo.Binario;
 
 public class main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InstantiationException, IllegalAccessException, ClassNotFoundException {
 	pruebaSustitucion();
 			  }
 			    
-			  private static void pruebaSustitucion(){
-			    
-			    Cifrador cifradoCesar = new Cesar();
+			  private static void pruebaSustitucion() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+				  
+				ServicioCifrador servicio = new ServicioCifrador();
+				CifradorFactory factory = new CifradorFactory();
+				  
+				//Cifrador cifrador = servicio.crearCifrado("Cesar");
+				Cifrador cifrador = factory.crearCifrador("Cesar");
+				Cifrador cifrador2 = factory.crearCifrador("Binario");
+
+				
+				pedirParams(cifrador);
+				pedirParams(cifrador2);
+				
+
+				
+			   /* Cifrador cifradoCesar = new Cesar();
 			    Cifrador cifradoVigenere = new Vigenere();
 			    Cifrador cifradoLlave = new Llave();
 			    ArrayList<String> params = new ArrayList<String>();
@@ -127,12 +141,26 @@ public class main {
 			    System.out.println(palabraCodificada);
 			    System.out.println(palabraDecodificada);
 			    System.out.println(palabra.equals(palabraDecodificada));
-			    System.out.println();
+			    System.out.println();*/
+				
 			  }
 			  
 			  private static String removeLastChar(String str) {
 				    return str.substring(0, str.length() - 1);
 				}
+			  
+			  private static void pedirParams(Cifrador cifrador) {
+					if (cifrador.getListParams()== null) {
+					    System.out.println("Digite el texto");
+						
+					}else {
+						for(int i = 0; cifrador.getListParams().size() > i; i++) {
+						    System.out.println("Digite el " + cifrador.getListParams().get(i) );
+							
+						}
+					    	
+					}
+			  }
 			  
 
 }
