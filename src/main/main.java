@@ -154,10 +154,13 @@ public class main {
 					    System.out.println("Digite el texto");
 						
 					}else {
+						ArrayList<String> parametros = new ArrayList<String>();
 						for(int i = 0; cifrador.getListParams().size() > i; i++) {
 						    System.out.println("Digite el " + cifrador.getListParams().get(i) );
-							
+						    // string param = sacarParametroEatson
+						    //parametros.add(params)	
 						}
+						// cifrador.setListParams(param);
 					    	
 					}
 			  }
